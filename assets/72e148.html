@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>InvestDash - Dashboard de Investimentos</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-slate-900 px-6 py-3 lg:px-40">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">InvestDash</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<div class="bg-slate-200 dark:bg-slate-700 rounded-full size-10 bg-cover bg-center" data-alt="User profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPdPFJKNCzjSTc5tBQaHjx7XKRnWb2ADP8d7WIe2C0ROUo4BfgXLdA8xrLTs9xA9T1_Ws7ZRR4kDKWjzVTvCCtSP5wvxMl2Mwc0lREhdbsshIQ692BFJKKIqyS9Q4fdz3kxnCturda22ukl_KTrrFaomHUVHTN4UFS8oq_krpDKaWxI6DX0m-9L8UjsJ8aZngByY_CthBarep1yk1e6OSOYcmOel75ZYtFK1FWNa0KYg_ZVtJOWyb6INwGeWq-qqOSU6k2k76DvX8');"></div>
+</div>
+</header>
+<main class="flex-1 px-4 py-8 lg:px-40 max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div>
+<h1 class="text-2xl font-bold">Olá, Investidor</h1>
+<p class="text-slate-500 dark:text-slate-400">Sua carteira está performando acima do CDI este mês.</p>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add_circle</span>
+                        Investir Agora
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Saldo Total Investido</p>
+<h3 class="text-2xl font-bold mt-1">R$ 85.420,50</h3>
+<div class="flex items-center gap-1 mt-2 text-emerald-600 dark:text-emerald-400 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                            +1.2% este mês
+                        </div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Rendimento Mensal</p>
+<h3 class="text-2xl font-bold mt-1">R$ 742,15</h3>
+<div class="flex items-center gap-1 mt-2 text-emerald-600 dark:text-emerald-400 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">payments</span>
+                            0.87% yield
+                        </div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Patrimônio Líquido</p>
+<h3 class="text-2xl font-bold mt-1">R$ 92.150,00</h3>
+<div class="flex items-center gap-1 mt-2 text-primary text-sm font-bold">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Inclui saldo em conta
+                        </div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Dividendos Projetados</p>
+<h3 class="text-2xl font-bold mt-1">R$ 412,00</h3>
+<div class="flex items-center gap-1 mt-2 text-slate-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                            Próximos 30 dias
+                        </div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<div class="lg:col-span-1 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<h3 class="text-lg font-bold mb-6">Alocação de Ativos</h3>
+<div class="flex flex-col gap-4">
+<div class="relative h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 45%;"></div>
+<div class="h-full bg-sky-400" style="width: 25%;"></div>
+<div class="h-full bg-indigo-600" style="width: 20%;"></div>
+<div class="h-full bg-emerald-500" style="width: 10%;"></div>
+</div>
+<div class="space-y-3 mt-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<span class="text-sm">Renda Fixa</span>
+</div>
+<span class="text-sm font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-sky-400"></div>
+<span class="text-sm">Ações</span>
+</div>
+<span class="text-sm font-bold">25%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-indigo-600"></div>
+<span class="text-sm">FIIs</span>
+</div>
+<span class="text-sm font-bold">20%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-emerald-500"></div>
+<span class="text-sm">Internacional</span>
+</div>
+<span class="text-sm font-bold">10%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Performance Histórica</h3>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs font-bold text-primary">
+<span class="size-2 bg-primary rounded-full"></span> Carteira
+                                </span>
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400">
+<span class="size-2 bg-slate-400 rounded-full"></span> CDI
+                                </span>
+</div>
+</div>
+<div class="h-[200px] w-full flex items-end gap-2 px-2">
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[40%]"></div>
+<div class="w-full bg-primary rounded-t h-[60%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Jan</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[45%]"></div>
+<div class="w-full bg-primary rounded-t h-[65%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Fev</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[50%]"></div>
+<div class="w-full bg-primary rounded-t h-[80%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Mar</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[55%]"></div>
+<div class="w-full bg-primary rounded-t h-[75%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Abr</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[60%]"></div>
+<div class="w-full bg-primary rounded-t h-[90%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Mai</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 items-center">
+<div class="w-full bg-primary/20 rounded-t h-[65%]"></div>
+<div class="w-full bg-primary rounded-t h-[100%]"></div>
+<span class="text-[10px] text-slate-400 mt-2">Jun</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/5 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-primary/5 flex justify-between items-center">
+<h3 class="text-lg font-bold">Meus Investimentos</h3>
+<button class="text-primary text-sm font-bold hover:underline">Ver todos</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4">Ativo</th>
+<th class="px-6 py-4">Classe</th>
+<th class="px-6 py-4">Valor Atual</th>
+<th class="px-6 py-4">Rentabilidade</th>
+<th class="px-6 py-4">% Carteira</th>
+<th class="px-6 py-4 text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
+                                                TD
+                                            </div>
+<div>
+<p class="font-bold text-sm">Tesouro Selic 2027</p>
+<p class="text-xs text-slate-400">Tesouro Direto</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Renda Fixa</td>
+<td class="px-6 py-4 text-sm font-bold">R$ 25.400,00</td>
+<td class="px-6 py-4 text-sm text-emerald-600 dark:text-emerald-400 font-bold">+10.4%</td>
+<td class="px-6 py-4 text-sm font-medium">29.7%</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-sky-400/10 flex items-center justify-center text-sky-600 font-bold text-xs">
+                                                IVVB
+                                            </div>
+<div>
+<p class="font-bold text-sm">IVVB11</p>
+<p class="text-xs text-slate-400">ETF S&amp;P 500</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Ações/Intl</td>
+<td class="px-6 py-4 text-sm font-bold">R$ 12.150,00</td>
+<td class="px-6 py-4 text-sm text-emerald-600 dark:text-emerald-400 font-bold">+18.2%</td>
+<td class="px-6 py-4 text-sm font-medium">14.2%</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-indigo-600/10 flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                                HGLG
+                                            </div>
+<div>
+<p class="font-bold text-sm">HGLG11</p>
+<p class="text-xs text-slate-400">Logística</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">FIIs</td>
+<td class="px-6 py-4 text-sm font-bold">R$ 8.920,00</td>
+<td class="px-6 py-4 text-sm text-rose-600 dark:text-rose-400 font-bold">-2.1%</td>
+<td class="px-6 py-4 text-sm font-medium">10.4%</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold text-xs">
+                                                CDB
+                                            </div>
+<div>
+<p class="font-bold text-sm">CDB Banco Inter</p>
+<p class="text-xs text-slate-400">102% CDI</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Renda Fixa</td>
+<td class="px-6 py-4 text-sm font-bold">R$ 15.000,00</td>
+<td class="px-6 py-4 text-sm text-emerald-600 dark:text-emerald-400 font-bold">+5.2%</td>
+<td class="px-6 py-4 text-sm font-medium">17.5%</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-10 px-4 lg:px-40 border-t border-primary/5 bg-white dark:bg-slate-900">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2024 InvestDash. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Ajuda</a>
+<a class="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Privacidade</a>
+<a class="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Termos</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

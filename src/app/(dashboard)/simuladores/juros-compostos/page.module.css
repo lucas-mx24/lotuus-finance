@@ -1,0 +1,320 @@
+.container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    min-height: calc(100vh - 80px);
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+}
+
+/* Parameters Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.cardTitle span {
+    color: #2d5cf7;
+}
+
+.inputGroup {
+    margin-bottom: 1.25rem;
+}
+
+.inputGroup label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.inputIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon>span {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.inputIcon input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    color: #1e293b;
+    transition: all 0.2s;
+    outline: none;
+    font-weight: 500;
+}
+
+.inputIcon input:focus {
+    border-color: #2d5cf7;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 0.375rem;
+}
+
+.infoBox {
+    background: #ecfdf5;
+    /* Light emerald */
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #a7f3d0;
+}
+
+.infoBox h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #065f46;
+    margin-bottom: 0.5rem;
+}
+
+.infoBox p {
+    font-size: 0.875rem;
+    color: #047857;
+    line-height: 1.5;
+}
+
+/* Results Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.kpiCard {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.kpiLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+}
+
+.highlightText {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d5cf7;
+    margin-bottom: 0.5rem;
+}
+
+.greenText {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #10b981;
+    margin-bottom: 0.5rem;
+}
+
+.darkText {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+/* Chart */
+.chartCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.chartLegend {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.legendDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.legendInvested {
+    background: #3b82f6;
+}
+
+.legendInterest {
+    background: #10b981;
+}
+
+.chartArea {
+    height: 280px;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.chartColumnWrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+
+.chartColumnInvested {
+    background: #3b82f6;
+    /* Blue for invested principal */
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    transition: all 0.3s;
+}
+
+.chartColumnInterest {
+    background: #10b981;
+    /* Green for accumulated interest */
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+    transition: all 0.3s;
+}
+
+.chartColumnWrapper:hover .chartColumnInvested {
+    background: #2563eb;
+}
+
+.chartColumnWrapper:hover .chartColumnInterest {
+    background: #059669;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: #0f172a;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    font-weight: 500;
+    z-index: 10;
+    pointer-events: none;
+    line-height: 1.4;
+    text-align: right;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip span {
+    color: #94a3b8;
+    margin-right: 0.5rem;
+}
+
+.chartColumnWrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+.chartLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+}

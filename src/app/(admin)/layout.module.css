@@ -1,0 +1,245 @@
+.adminLayout {
+    display: flex;
+    height: 100vh;
+    background-color: #f6f6f8;
+    /* Muted background to highlight white cards */
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    overflow: hidden;
+}
+
+/* Sidebar styling mimicking the reference */
+.sidebar {
+    width: 260px;
+    background-color: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    flex-shrink: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.logoIcon {
+    width: 36px;
+    height: 36px;
+    background-color: #2d5cf7;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandName {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.badgeAdmin {
+    font-size: 0.65rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Navigation Links */
+.navSection {
+    margin-bottom: 2rem;
+}
+
+.navSectionTitle {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.navItem:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+.navItem.active {
+    background-color: #eef2ff;
+    color: #2d5cf7;
+    font-weight: 600;
+}
+
+.navItem .icon {
+    font-size: 1.25rem;
+}
+
+/* Bottom Help Card */
+.helpCard {
+    margin-top: auto;
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.helpIcon {
+    width: 32px;
+    height: 32px;
+    background-color: #e2e8f0;
+    color: #2d5cf7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helpText {
+    font-size: 0.75rem;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.helpSubtext {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+/* Main Content Area */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Topbar */
+.topbar {
+    height: 72px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    flex-shrink: 0;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    width: 300px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: #1e293b;
+    width: 100%;
+}
+
+.searchInput::placeholder {
+    color: #94a3b8;
+}
+
+.topbarActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notificationBtn {
+    color: #475569;
+    position: relative;
+    cursor: pointer;
+}
+
+.notificationDot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.userInfo {
+    text-align: right;
+}
+
+.userName {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.userRole {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fcd34d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #b45309;
+}
+
+/* Content Wrapper inside Main */
+.contentArea {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}

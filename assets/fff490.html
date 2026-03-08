@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Relatório FIRE - Visualização</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar (Action Area) -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="max-w-4xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">database</span>
+<span class="font-bold text-lg tracking-tight">Simulador <span class="text-primary">FIRE</span></span>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">print</span>
+                    Imprimir
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Download PDF
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Report Container -->
+<main class="max-w-4xl mx-auto my-8 p-4 md:p-0">
+<!-- Paper Page -->
+<div class="bg-white dark:bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 min-h-[1122px] p-12 flex flex-col">
+<!-- Report Header -->
+<header class="flex justify-between items-start border-b border-slate-100 dark:border-slate-800 pb-8 mb-8">
+<div>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 mb-2">Relatório de Independência Financeira (FIRE)</h1>
+<p class="text-slate-500 text-sm">Gerado automaticamente em 24 de Outubro de 2023</p>
+</div>
+<div class="text-right">
+<div class="bg-primary/10 text-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-wider mb-2 inline-block">Confidencial</div>
+<p class="text-xs text-slate-400">ID: FIRE-2023-8842</p>
+</div>
+</header>
+<!-- Summary Cards -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="p-6 rounded-xl bg-primary/5 border border-primary/20">
+<p class="text-sm font-medium text-primary mb-1">Seu Número FIRE</p>
+<p class="text-3xl font-black text-slate-900 dark:text-slate-50">R$ 1.714.285</p>
+</div>
+<div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<p class="text-sm font-medium text-slate-500 mb-1">Tempo Estimado</p>
+<p class="text-3xl font-black text-slate-900 dark:text-slate-50">18 anos, 4 meses</p>
+</div>
+<div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<p class="text-sm font-medium text-slate-500 mb-1">Taxa de Retirada</p>
+<p class="text-xl font-bold text-slate-900 dark:text-slate-50">3,5% <span class="text-sm font-normal text-slate-500 block">Conservadora</span></p>
+</div>
+</section>
+<!-- Detailed Breakdown -->
+<section class="mb-10">
+<h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">settings</span>
+                    Parâmetros da Simulação
+                </h2>
+<div class="grid grid-cols-2 gap-x-12 gap-y-3">
+<div class="flex justify-between border-b border-slate-50 dark:border-slate-800 py-2">
+<span class="text-slate-600 dark:text-slate-400">Gasto Mensal Desejado</span>
+<span class="font-semibold">R$ 5.000,00</span>
+</div>
+<div class="flex justify-between border-b border-slate-50 dark:border-slate-800 py-2">
+<span class="text-slate-600 dark:text-slate-400">Patrimônio Atual</span>
+<span class="font-semibold">R$ 150.000,00</span>
+</div>
+<div class="flex justify-between border-b border-slate-50 dark:border-slate-800 py-2">
+<span class="text-slate-600 dark:text-slate-400">Aporte Mensal</span>
+<span class="font-semibold">R$ 2.500,00</span>
+</div>
+<div class="flex justify-between border-b border-slate-50 dark:border-slate-800 py-2">
+<span class="text-slate-600 dark:text-slate-400">Taxa de Juros Real (Est.)</span>
+<span class="font-semibold">6% a.a.</span>
+</div>
+</div>
+</section>
+<!-- Comparative Scenarios -->
+<section class="mb-10">
+<h2 class="text-xl font-bold mb-4">Cenários Comparativos</h2>
+<div class="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 uppercase text-xs font-bold">
+<tr>
+<th class="px-6 py-3">Taxa de Retirada (SWR)</th>
+<th class="px-6 py-3">Número FIRE Necessário</th>
+<th class="px-6 py-3">Tempo de Acúmulo</th>
+<th class="px-6 py-3">Perfil de Risco</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="bg-primary/5">
+<td class="px-6 py-4 font-bold text-primary">3,5%</td>
+<td class="px-6 py-4">R$ 1.714.285</td>
+<td class="px-6 py-4">18.3 anos</td>
+<td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 text-[10px] rounded font-bold uppercase">Conservador</span></td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-semibold text-slate-700 dark:text-slate-300">4,0%</td>
+<td class="px-6 py-4">R$ 1.500.000</td>
+<td class="px-6 py-4">16.8 anos</td>
+<td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-[10px] rounded font-bold uppercase">Moderado</span></td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-semibold text-slate-700 dark:text-slate-300">5,0%</td>
+<td class="px-6 py-4">R$ 1.200.000</td>
+<td class="px-6 py-4">14.2 anos</td>
+<td class="px-6 py-4"><span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] rounded font-bold uppercase">Agressivo</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Patrimony Projection (Simulated Chart) -->
+<section class="mb-10">
+<h2 class="text-xl font-bold mb-4">Projeção de Patrimônio</h2>
+<div class="h-64 w-full bg-slate-50 dark:bg-slate-800 rounded-xl relative flex items-end px-6 pb-12 gap-2">
+<!-- Abstract representation of a growth curve -->
+<div class="flex-1 bg-primary/20 rounded-t h-[10%] relative group">
+<div class="absolute -bottom-6 left-0 right-0 text-center text-[10px] text-slate-400 uppercase">Ano 0</div>
+</div>
+<div class="flex-1 bg-primary/30 rounded-t h-[15%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[22%]"></div>
+<div class="flex-1 bg-primary/50 rounded-t h-[32%]"></div>
+<div class="flex-1 bg-primary/60 rounded-t h-[45%]"></div>
+<div class="flex-1 bg-primary/70 rounded-t h-[60%] relative">
+<div class="absolute -bottom-6 left-0 right-0 text-center text-[10px] text-slate-400 uppercase">Ano 10</div>
+</div>
+<div class="flex-1 bg-primary/80 rounded-t h-[78%]"></div>
+<div class="flex-1 bg-primary/90 rounded-t h-[95%] relative">
+<div class="absolute -top-10 -left-1/2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Meta FIRE Atingida!</div>
+<div class="absolute -bottom-6 left-0 right-0 text-center text-[10px] text-slate-400 uppercase">Ano 18</div>
+</div>
+<!-- Y Axis Labels -->
+<div class="absolute left-2 top-0 bottom-12 flex flex-col justify-between text-[10px] text-slate-400 font-bold uppercase">
+<span>R$ 2M</span>
+<span>R$ 1.5M</span>
+<span>R$ 1M</span>
+<span>R$ 500k</span>
+</div>
+</div>
+</section>
+<!-- Optimization Tips & Checklist -->
+<section class="mt-auto pt-8 border-t border-slate-100 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-50 mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">checklist</span>
+                            Checklist de Próximos Passos
+                        </h3>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                Validar gastos reais médios dos últimos 12 meses.
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                                Diversificar carteira em ativos globais (Dólar).
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                                Reavaliar aporte mensal após reajuste salarial anual.
+                            </li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-50 mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">lightbulb</span>
+                            Dicas de Otimização
+                        </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                            "Aumentar seu aporte mensal em apenas R$ 500,00 pode reduzir seu tempo até a liberdade financeira em aproximadamente 2 anos e 3 meses."
+                        </p>
+</div>
+</div>
+</section>
+<!-- Report Footer -->
+<footer class="mt-12 text-center border-t border-slate-50 dark:border-slate-800 pt-6">
+<p class="text-xs text-slate-400 font-medium tracking-wide flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+                    Simulando sua Liberdade Financeira
+                </p>
+<p class="text-[10px] text-slate-300 mt-1 uppercase">A simulação não garante rentabilidade futura. Consulte um profissional financeiro.</p>
+</footer>
+</div>
+</main>
+<!-- Bottom Footer for UI (not report) -->
+<footer class="max-w-4xl mx-auto py-8 px-4 text-center">
+<div class="flex flex-wrap justify-center gap-4">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<span class="text-slate-300">•</span>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Política de Privacidade</a>
+<span class="text-slate-300">•</span>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Suporte</a>
+</div>
+</footer>
+</body></html>

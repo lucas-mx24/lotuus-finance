@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header/TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">FinançaControl</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline text-slate-600 dark:text-slate-400 text-sm">Já tem uma conta?</span>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 border border-primary text-primary hover:bg-primary/10 text-sm font-bold transition-colors">
+<span>Entrar</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center p-6 sm:p-12">
+<div class="w-full max-w-[520px] bg-white dark:bg-slate-900 rounded-xl shadow-xl p-8 border border-slate-200 dark:border-slate-800">
+<div class="mb-8">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-black leading-tight tracking-tight mb-2">Criar sua conta</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base">Junte-se a milhares de pessoas que já controlam seu futuro financeiro.</p>
+</div>
+<form class="flex flex-col gap-5">
+<!-- Nome Completo -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Nome Completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">person</span>
+<input class="w-full pl-12 pr-4 h-14 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400" placeholder="Como quer ser chamado?" type="text"/>
+</div>
+</div>
+<!-- E-mail -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">E-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+<input class="w-full pl-12 pr-4 h-14 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Senha -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Senha</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
+<input class="w-full pl-12 pr-10 h-14 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Confirmação de Senha -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Confirmar Senha</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">lock_reset</span>
+<input class="w-full pl-12 pr-4 h-14 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Checkbox Termos -->
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="terms" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-400 leading-tight" for="terms">
+                                Eu li e aceito os <a class="text-primary font-bold hover:underline" href="#">termos de uso</a> e a <a class="text-primary font-bold hover:underline" href="#">política de privacidade</a> da plataforma.
+                            </label>
+</div>
+<!-- Botão Criar Conta -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 rounded-lg shadow-lg shadow-primary/25 transition-all transform active:scale-[0.98] mt-4 flex items-center justify-center gap-2" type="submit">
+<span>Criar minha conta</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Divisor Social -->
+<div class="relative my-4">
+<div class="absolute inset-0 flex items-center">
+<span class="w-full border-t border-slate-200 dark:border-slate-800"></span>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-white dark:bg-slate-900 px-2 text-slate-400">Ou cadastre-se com</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-12 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-semibold text-slate-700 dark:text-slate-300" type="button">
+<img alt="" class="w-5 h-5" data-alt="Logotipo do Google para autenticação social" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPfq8dabVl5uFWNnOFOkQWq0dqzT4cBlu0C3V853wLWUJCioPd7vHm8hV1FS5A3R8RmT-CdkTZyTjRsMDyzGkzZoI83WS93hXJFKwSy_7W_kxVS0M0KxDE9tduXsqjqFVFDmPOpbOL6EIIoYym6m70tQdigGq1myNIRWmfT74Ew76RxOSdP_nXOc5cQfgPLMFC9YbZezMZNJWZROachSmJV8xQt5w5hdgTIJ8RmzLwWooznqQJSxI45yz3xR-bAEmhSZq-T1h7GTM"/>
+                                Google
+                            </button>
+<button class="flex items-center justify-center gap-2 h-12 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-semibold text-slate-700 dark:text-slate-300" type="button">
+<span class="material-symbols-outlined text-black dark:text-white">account_circle</span>
+                                Apple
+                            </button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="px-6 py-8 text-center text-slate-500 dark:text-slate-500 text-sm">
+                © 2024 FinançaControl. Todos os direitos reservados.
+            </footer>
+</div>
+</div>
+</body></html>

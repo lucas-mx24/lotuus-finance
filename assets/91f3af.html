@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meu Financeiro - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 md:px-10 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined block">account_balance_wallet</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Meu Financeiro</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm">calendar_month</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase">Outubro 2023</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Avatar of the user in a professional style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB69XwO9L7ozdr2QGTxfqnnkXH-WFH22XC1CDwh1wSiGjVYUuJbMjBtDBK4rzF1w1WM9R-Z6VRj3c2bdH3LAG8vVQuc_tCzGzNacVUmJiCCKKmkeBE0W9-M399G9FEJE-l1Lx81Jqgs_1OCvsCJ-zeBsB2tjCgKKcAAC7s6yAe1mCl5O47c66-kNDwQm5NTlu80UzKokSxCZXqavuoXSqx8Yz-TnBIu9Y73byI4EXDtViKe0pW9Y6WZvEM5Ce9KyGuZuirY7CWn63Q"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-4 md:px-10 py-8">
+<!-- 1. Balance & Monthly View -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-primary p-6 rounded-xl shadow-lg shadow-primary/20 text-white flex flex-col justify-between">
+<div>
+<p class="text-white/80 text-sm font-medium uppercase tracking-wider mb-1">Saldo Total</p>
+<h3 class="text-3xl font-extrabold">R$ 14.250,00</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-white/90 text-sm">
+<span class="material-symbols-outlined text-green-300">trending_up</span>
+<span>+4.2% em relação ao mês anterior</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider mb-1">Entradas (Receitas)</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">R$ 9.800,00</h3>
+</div>
+<div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg text-green-600">
+<span class="material-symbols-outlined">south_west</span>
+</div>
+</div>
+<div class="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-full"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider mb-1">Saídas (Despesas)</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">R$ 5.420,00</h3>
+</div>
+<div class="bg-red-100 dark:bg-red-900/30 p-2 rounded-lg text-red-600">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mr-4">
+<div class="h-full bg-red-500 w-[55%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-500">55%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Transactions and Categories -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Remaining Banner -->
+<div class="bg-slate-900 dark:bg-primary/20 p-5 rounded-xl flex items-center justify-between text-white border border-white/10">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-light">savings</span>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Disponível para Gastar</p>
+<p class="text-2xl font-bold">R$ 4.380,00</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-bold text-sm transition-all shadow-md">
+                            Novo Gasto
+                        </button>
+</div>
+<!-- Category Breakdown (Bar Chart style with cards) -->
+<section>
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+                            Gastos por Categoria
+                        </h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<span class="material-symbols-outlined text-xl">home</span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">Moradia</p>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100 mt-1">R$ 2.400</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<div class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">Mercado</p>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100 mt-1">R$ 1.200</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<span class="material-symbols-outlined text-xl">commute</span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">Transporte</p>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100 mt-1">R$ 650</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<div class="w-10 h-10 bg-pink-100 dark:bg-pink-900/30 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<span class="material-symbols-outlined text-xl">subscriptions</span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">Assinaturas</p>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100 mt-1">R$ 320</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<span class="material-symbols-outlined text-xl">celebration</span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">Lazer</p>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100 mt-1">R$ 850</p>
+</div>
+</div>
+</section>
+<!-- Recent Transactions -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+                                Transações Recentes
+                            </h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">Ver tudo</a>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center">
+<span class="material-symbols-outlined">shopping_basket</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Pão de Açúcar</p>
+<p class="text-xs text-slate-500">Mercado • Hoje, 14:30</p>
+</div>
+</div>
+<p class="text-sm font-bold text-red-600">- R$ 245,30</p>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Salário Mensal</p>
+<p class="text-xs text-slate-500">Renda • Ontem, 09:00</p>
+</div>
+</div>
+<p class="text-sm font-bold text-green-600">+ R$ 9.800,00</p>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Posto Ipiranga</p>
+<p class="text-xs text-slate-500">Transporte • 24 Out</p>
+</div>
+</div>
+<p class="text-sm font-bold text-red-600">- R$ 320,00</p>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-lg bg-pink-100 dark:bg-pink-900/30 text-pink-600 flex items-center justify-center">
+<span class="material-symbols-outlined">movie</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Netflix</p>
+<p class="text-xs text-slate-500">Assinaturas • 22 Out</p>
+</div>
+</div>
+<p class="text-sm font-bold text-red-600">- R$ 55,90</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Goals & Insights -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Savings Goals -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">target</span>
+                                Metas de Economia
+                            </h2>
+<button class="p-1 rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="space-y-6">
+<!-- Goal 1 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Reserva de Emergência</p>
+<p class="text-xs text-slate-500">R$ 25.000 / R$ 40.000</p>
+</div>
+<span class="text-xs font-bold text-primary">62%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[62%] rounded-full"></div>
+</div>
+</div>
+<!-- Goal 2 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Próxima Viagem (Europa)</p>
+<p class="text-xs text-slate-500">R$ 8.500 / R$ 15.000</p>
+</div>
+<span class="text-xs font-bold text-emerald-500">56%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[56%] rounded-full"></div>
+</div>
+</div>
+<!-- Goal 3 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Entrada Novo Carro</p>
+<p class="text-xs text-slate-500">R$ 4.200 / R$ 20.000</p>
+</div>
+<span class="text-xs font-bold text-orange-500">21%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-orange-500 w-[21%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insights / Tips -->
+<section class="bg-primary/5 dark:bg-slate-800/40 p-6 rounded-xl border border-primary/20">
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+                            Dicas do Especialista
+                        </h2>
+<div class="space-y-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-primary uppercase mb-1">Regra 50-30-20</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                                    Tente destinar 50% para necessidades, 30% para desejos e 20% para poupança. No seu perfil atual, você está com 45% em necessidades! Ótimo trabalho.
+                                </p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-primary uppercase mb-1">Reserva de Oportunidade</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                                    Com o rendimento da Selic, considere deixar sua reserva em um CDB com liquidez diária para render acima da inflação.
+                                </p>
+</div>
+</div>
+<button class="mt-6 w-full py-2 text-primary font-bold text-sm border-2 border-primary/30 rounded-lg hover:bg-primary/5 transition-all">
+                            Ver mais dicas
+                        </button>
+</section>
+<!-- Profile Banner/Action -->
+<div class="relative overflow-hidden rounded-xl bg-slate-900 p-6 text-white group">
+<div class="relative z-10">
+<p class="text-xs font-bold text-primary-light mb-1">Upgrade</p>
+<h4 class="text-lg font-bold leading-tight mb-2">Precisa de um planejamento completo?</h4>
+<p class="text-sm text-slate-400 mb-4">Fale com um consultor financeiro certificado e acelere suas metas.</p>
+<button class="bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors">
+                                Agendar Mentoria
+                            </button>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[160px]">finance_chip</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-8 px-4 md:px-10 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-sm text-slate-500">© 2023 Meu Financeiro • Gestão Financeira Inteligente para Brasileiros</p>
+<div class="flex items-center justify-center gap-4 mt-4 text-xs text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">Suporte</a>
+</div>
+</footer>
+</div>
+</body></html>

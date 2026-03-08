@@ -1,0 +1,243 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.titleWrapper h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem 0;
+}
+
+.titleWrapper p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.btnPrimary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2d5cf7;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(45, 92, 247, 0.2);
+}
+
+.btnPrimary:hover {
+    background-color: #1e4bdb;
+}
+
+.btnDanger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    border: 1px solid #fca5a5;
+    color: #dc2626;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.btnDanger:hover {
+    background-color: #fef2f2;
+}
+
+/* Settings Sections */
+.settingsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settingsCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.cardTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.cardDesc {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0.25rem 0 0 0;
+}
+
+/* Form Fields */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fieldGroupFull {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fieldGroup label,
+.fieldGroupFull label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.fieldGroup input,
+.fieldGroupFull input,
+.fieldGroup select,
+.fieldGroupFull textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.fieldGroup input:focus,
+.fieldGroupFull input:focus,
+.fieldGroup select:focus,
+.fieldGroupFull textarea:focus {
+    border-color: #2d5cf7;
+    box-shadow: 0 0 0 3px rgba(45, 92, 247, 0.1);
+}
+
+.fieldGroupFull textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.fieldHint {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Toggle Switches */
+.toggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.toggleRow:last-child {
+    border-bottom: none;
+}
+
+.toggleInfo h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 0.25rem 0;
+}
+
+.toggleInfo p {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.toggleSlider::before {
+    position: absolute;
+    content: '';
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle input:checked+.toggleSlider {
+    background-color: #2d5cf7;
+}
+
+.toggle input:checked+.toggleSlider::before {
+    transform: translateX(20px);
+}
+
+/* Danger Zone */
+.dangerZone {
+    border-color: #fecaca;
+}
+
+.dangerZone .cardHeader {
+    border-bottom-color: #fecaca;
+}
+
+.dangerActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}

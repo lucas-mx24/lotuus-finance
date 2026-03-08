@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simulador FIRE - Liberdade Financeira</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined">local_fire_department</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Simulador FIRE</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 flex-col lg:flex-row">
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-10 max-w-5xl mx-auto w-full">
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-2">Simule sua Liberdade</h1>
+<p class="text-slate-500 dark:text-slate-400">Calcule quanto falta para você atingir a independência financeira e se aposentar antecipadamente.</p>
+</div>
+<!-- Input Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Gasto Mensal Desejado</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">R$</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary transition-all" placeholder="5.000" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Patrimônio Atual</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">R$</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary transition-all" placeholder="100.000" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Aporte Mensal</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">R$</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary transition-all" placeholder="2.000" type="text"/>
+</div>
+</div>
+</div>
+<!-- Rate Selector -->
+<div class="mb-10">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 block">Taxa de Retirada Segura (SWR)</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="flex flex-col p-4 border-2 border-primary bg-primary/5 rounded-xl text-left hover:border-primary transition-colors">
+<span class="text-xs font-bold text-primary uppercase mb-1">Conservadora</span>
+<span class="text-xl font-bold">3,5%</span>
+<span class="text-xs text-slate-500">Recomendado para o cenário BR</span>
+</button>
+<button class="flex flex-col p-4 border-2 border-slate-200 dark:border-slate-700 rounded-xl text-left hover:border-primary transition-colors">
+<span class="text-xs font-bold text-slate-500 uppercase mb-1">Regra dos 4%</span>
+<span class="text-xl font-bold">4,0%</span>
+<span class="text-xs text-slate-500">Benchmark Global (Trinity)</span>
+</button>
+<button class="flex flex-col p-4 border-2 border-slate-200 dark:border-slate-700 rounded-xl text-left hover:border-primary transition-colors">
+<span class="text-xs font-bold text-slate-500 uppercase mb-1">Arrojada</span>
+<span class="text-xl font-bold">5,0%</span>
+<span class="text-xs text-slate-500">Requer mais flexibilidade de gastos</span>
+</button>
+</div>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 flex items-center justify-center bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-slate-500 font-medium">Seu Número FIRE</span>
+</div>
+<div class="text-3xl font-bold text-slate-900 dark:text-slate-100">R$ 1.714.285</div>
+<p class="text-xs text-slate-400 mt-2">Patrimônio necessário para sustentar seu estilo de vida.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<span class="text-slate-500 font-medium">Tempo Estimado</span>
+</div>
+<div class="text-3xl font-bold text-slate-900 dark:text-slate-100">18 anos, 4 meses</div>
+<p class="text-xs text-slate-400 mt-2">Considerando rentabilidade real de 6% a.a.</p>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm mb-10">
+<div class="flex justify-between items-end mb-4">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Progresso até a Liberdade</h3>
+<p class="text-sm text-slate-500">Você já percorreu 6% do caminho.</p>
+</div>
+<span class="text-2xl font-black text-primary">5,8%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 5.8%"></div>
+</div>
+<div class="flex justify-between mt-3 text-xs font-medium text-slate-400">
+<span>R$ 100.000 acumulados</span>
+<span>Meta: R$ 1.7M</span>
+</div>
+</div>
+<!-- Chart Placeholder -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Projeção de Crescimento</h3>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs text-slate-500">
+<span class="size-2 rounded-full bg-primary"></span> Patrimônio
+                                </span>
+<span class="flex items-center gap-1 text-xs text-slate-500">
+<span class="size-2 rounded-full bg-slate-300"></span> Total Aportado
+                                </span>
+</div>
+</div>
+<div class="h-64 w-full relative">
+<!-- SVG Chart Simulation -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 200">
+<path d="M0,180 Q200,170 400,120 T800,20" fill="none" stroke="#1754cf" stroke-width="4"></path>
+<path d="M0,180 L800,100" fill="none" stroke="#cbd5e1" stroke-dasharray="4" stroke-width="2"></path>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:rgba(23,84,207,0.2);stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(23,84,207,0);stop-opacity:1"></stop>
+</lineargradient>
+<path d="M0,180 Q200,170 400,120 T800,20 L800,200 L0,200 Z" fill="url(#grad1)"></path>
+</svg>
+<div class="absolute bottom-0 left-0 right-0 flex justify-between px-2 text-[10px] text-slate-400 uppercase tracking-widest pt-4 border-t border-slate-100 dark:border-slate-800">
+<span>Hoje</span>
+<span>5 anos</span>
+<span>10 anos</span>
+<span>15 anos</span>
+<span>Meta</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Sidebar Info -->
+<aside class="w-full lg:w-80 bg-slate-50 dark:bg-slate-950 border-l border-slate-200 dark:border-slate-800 p-8">
+<div class="sticky top-24">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined">info</span>
+<h4 class="font-bold text-sm uppercase tracking-wider">Entenda as Taxas</h4>
+</div>
+<div class="space-y-6">
+<div>
+<h5 class="text-slate-900 dark:text-slate-100 font-bold text-sm mb-2">Por que a SWR importa?</h5>
+<p class="text-sm text-slate-500 leading-relaxed">
+                                    A Taxa de Retirada Segura (Safe Withdrawal Rate) define quanto do seu patrimônio você pode sacar anualmente sem o risco de ficar sem dinheiro antes do fim da vida.
+                                </p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<h5 class="text-slate-900 dark:text-slate-100 font-bold text-xs uppercase mb-3 text-primary">Regras de Ouro</h5>
+<ul class="space-y-3">
+<li class="flex gap-3 text-xs leading-tight">
+<span class="material-symbols-outlined text-sm text-green-500">check_circle</span>
+<span class="text-slate-500"><strong class="text-slate-700 dark:text-slate-300">Taxa Baixa:</strong> Maior segurança contra inflação e crises, mas exige mais capital acumulado.</span>
+</li>
+<li class="flex gap-3 text-xs leading-tight">
+<span class="material-symbols-outlined text-sm text-amber-500">warning</span>
+<span class="text-slate-500"><strong class="text-slate-700 dark:text-slate-300">Taxa Alta:</strong> Permite parar antes, mas exige flexibilidade para reduzir gastos se o mercado cair.</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary/90 transition-colors">
+                                    Gerar Relatório PDF
+                                    <span class="material-symbols-outlined text-sm">download</span>
+</button>
+<p class="text-[10px] text-center text-slate-400 mt-4">
+                                    Valores baseados em médias históricas. Rentabilidade passada não é garantia de lucros futuros.
+                                </p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</body></html>

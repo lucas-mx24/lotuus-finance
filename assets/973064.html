@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>FinanControl - Login</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="w-full px-6 py-4 flex items-center justify-between bg-white/50 dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-2 rounded-lg shadow-lg shadow-primary/20">
+<svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="white" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">FinanControl</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline text-sm text-slate-500">Não tem uma conta?</span>
+<button class="bg-primary/10 hover:bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                Criar conta
+            </button>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center p-6 relative overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-40 dark:opacity-20">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-10" data-alt="Padrão sutil de pontos azuis" style="background-image: radial-gradient(circle at 2px 2px, #1754cf 1px, transparent 0); background-size: 40px 40px;">
+</div>
+</div>
+<div class="w-full max-w-[1000px] grid md:grid-cols-2 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden relative z-10 border border-slate-200 dark:border-slate-800">
+<div class="hidden md:flex flex-col justify-center p-12 bg-slate-50 dark:bg-slate-900/50 border-r border-slate-200 dark:border-slate-800">
+<div class="mb-8">
+<img alt="Dashboard financeiro ilustrativo" class="rounded-2xl shadow-lg w-full aspect-video object-cover" data-alt="Notebook exibindo gráficos de crescimento financeiro azul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwdFLzKP3kjkIySVryM19W0SdYRwb7riHgj6MCMAIMrKNt0Ku8qQZXRbX2fM104AqDog2W0SvWECvfGY7zpwjNFGLrXYBRL6Tse0xy48HuCuUYX7jbz2MoueAMtApGbVtIRlb-N4cpVQPVbHhbvT-ji_dOljA-vJaYJWHZKDqynbi3B-MhsAMZc4IA-5t95C_FDipWC_AwaTwoqB3WI8NXFkUTFsIM58Y2BCT8hGa5-XoKjSaIOg4h_UTHepFiMIR42-d76OTqYCU"/>
+</div>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Mantenha o foco em suas metas.</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    Centenas de pessoas utilizam o FinanControl para organizar suas vidas financeiras de forma inteligente e automática.
+                </p>
+<div class="mt-8 flex gap-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900" data-alt="Avatar de usuário feliz" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW2wIwoLtiuA5z8uNhQLfuwFKX6t3QezsjCYJ6dr2vRLaWoI7EJmhBEvBJuAzmqxy2nIrbrnHzIiT2b-NOXwUPA81B--a-3aC3iNI1XSOISe2GCNEStS5RyWWv3i3Hc1hZSDDfSt0-FwLzqHds3DMAxtPKuEsX6pFsZPhO2BETm6yTWaKhS4OmEGjryDLdpxQ86C2ALsRYKBDJRk1Nh_pad3KNnxFH6MDkizRg4_ktzzRJmJcSoQZSPqZRCZ3HKYTaDRUgPDU6Xv0"/>
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900" data-alt="Avatar de usuário sorrindo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-PF6Y-KRn0c8tbHJIHoVzW7EkL39KTjPGsS4zJ_j3KbyGJPa94h4Atf5XQsza57f8kfQRHkjEqf9YuJt_s8jKG_zeyFSvY-wR6lj-HBGL3KXI0EStv3Uzoh8M8ePqgA8ChtNUZYJc4LY9DV_NwFmgY2Ke3jBYxlSxvgKZvU9kxgxiual4n0ytUDASLc-XIEFgnm1yybuuVHiMG1C317PSm2MlKpLKNY3QatHvDVJFVVMInmn78YQVaNLtM4GpdiSHUOWx_A-I1g8"/>
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900" data-alt="Avatar de usuário corporativo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPXQEgmgZaG91-gAUpFZhly1wA1Ztmw01kV9lfj-id4TrtWX9sh6MYd7oBmXc3QZmUgHKbAsZr73cY8mRRO0vYIL0nRIsuiv1-b_2xtNf518zkOfQSD_NZ0yU9UWaWUsOBcp3mPyOv4reTiblP3S3-WWa3H8VPolZLs5MPIhV6KoG9_KBNaHYTd5kzVlB2tvkjov2krKZ8unAqaWaX34cqQs6nwjzET1-E9TJ37jJ0dmAu8m8GDtnnq0siwAyzbawgN1-VHddeTwk"/>
+</div>
+<div class="text-sm">
+<span class="block font-bold text-slate-900 dark:text-white">+2.400 usuários</span>
+<span class="text-slate-500">Já estão economizando</span>
+</div>
+</div>
+</div>
+<div class="p-8 sm:p-12 flex flex-col justify-center">
+<div class="mb-8 text-center md:text-left">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Bem-vindo de volta</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Acesse sua conta para gerenciar suas finanças</p>
+</div>
+<div class="flex flex-col gap-4 mb-8">
+<button class="flex items-center justify-center gap-3 w-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all font-medium text-slate-700 dark:text-slate-200 shadow-sm">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-5.38z" fill="#EA4335"></path>
+</svg>
+<span>Entrar com Google</span>
+</button>
+<div class="flex items-center gap-4 text-slate-400 text-xs uppercase font-bold tracking-widest">
+<div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
+<span>Ou use seu e-mail</span>
+<div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
+</div>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="email">E-mail</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white placeholder:text-slate-400" id="email" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="password">Senha</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Esqueceu a senha?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white placeholder:text-slate-400" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary cursor-pointer" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-500 cursor-pointer select-none" for="remember">Lembrar de mim</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all active:scale-[0.98]" type="submit">
+                        Entrar na conta
+                    </button>
+</form>
+<p class="mt-8 text-center text-slate-500 text-sm">
+                    Ao continuar, você concorda com nossos <a class="text-slate-900 dark:text-white font-semibold hover:underline" href="#">Termos de Uso</a> e <a class="text-slate-900 dark:text-white font-semibold hover:underline" href="#">Privacidade</a>.
+                </p>
+</div>
+</div>
+</main>
+<footer class="w-full py-6 text-center text-slate-500 text-xs mt-auto">
+        © 2024 FinanControl. Todos os direitos reservados.
+    </footer>
+</body></html>
